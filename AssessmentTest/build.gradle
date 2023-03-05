@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.8.1'
+    testImplementation group: 'org.testng', name: 'testng', version: '6.14.3'
+    implementation 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    testImplementation 'org.projectlombok:lombok:1.18.12'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '2.23.0'
+    implementation group: 'org.assertj', name: 'assertj-core', version: '3.15.0'
+    implementation group: 'com.thedeanda', name: 'lorem', version: '2.1'
+
+}
+
+test {
+    useTestNG(){
+
+    }
+}
